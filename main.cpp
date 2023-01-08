@@ -5,11 +5,19 @@
      Contact: boutelidjaneyounes@gmail.com
 */
 #include <iostream>
+#include <string>
 
 using std::cout;
 using std::cin;
 using std::endl;
 
+struct Account
+{
+	std::string name;
+	int pin_num;
+};
+
+Account client;
 double balance = 0.0;
 
 void showMenu();
@@ -20,10 +28,9 @@ void withdrawFunc();
 int main(){
     
     int selection;
-    
+    showMenu();
 do
 {
-   showMenu();
    cout << "Selection: ";
    cin>> selection;
    switch(selection){
@@ -37,6 +44,7 @@ do
         withdrawFunc();
         break;
         case 4:
+		cout << "Thank you and Have a nice day :)";
         exit(1);
         break;
         default:
@@ -51,7 +59,13 @@ do
 void showMenu(){
     cout<<"*************Hello!*************\n";
     cout<<"******Welcome to ATM banking******\n\n";
-    cout<<"**Please choose what of the option below**\n\n";
+	cout<<"Please enter you name and your pin number\n";
+    cout<<"Name: ";
+    cin >> client.name;
+    cout<<"\npin number: ";
+    cin >> client.pin_num;
+    cout << "Welcome "<< client.name <<"\nHow can I help you today?\n\n";
+    cout<<"**Please choose one of the option below**\n\n";
     cout<<"< 1 > Check balance\n";
     cout<<"< 2 > Deposit\n";
     cout<<"< 3 > Withdraw\n";
