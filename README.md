@@ -1,1 +1,0 @@
-# Simple-Bank-Management-System-Using-Cpp
