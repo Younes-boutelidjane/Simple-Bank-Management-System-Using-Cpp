@@ -2,13 +2,7 @@
 #include <iostream>
 
 
-struct Account
-{
-	std::string name;
-	int pin_num;
-};
 
-Account client;
 double balance = 0.0;
 
 void showMenu(){
